@@ -1,14 +1,10 @@
 Template.booksList.books = function () {
 	if (Meteor.userId()) {
-		return Books.find({author: Meteor.user().profile.completeName});
+		return Books.find({ author: Meteor.user().profile.completeName });
 	} else{
 		return Books.find();
 	}
 };
-
-Template.booksList.authorName = function () {
-	return Meteor.users.findOne({_id: this.author });
-}
 
 Template.insertBook.events({
 	'submit #insertBook': function (e, t) {
