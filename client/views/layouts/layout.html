@@ -1,0 +1,15 @@
+<template name="layout">
+	<nav>
+		<p><a href="{{ pathFor 'booksList' }}">Home</a>
+			{{#if currentUser }}
+			 | Seja bem vindo {{ currentUser.profile.completeName }}
+			 | <a href="{{ pathFor 'insertBook' }}">Adicionar Livro</a>
+			 | <a href="{{ pathFor 'logout' }}" id="logout">Sair do Sistema</a>
+		  {{else}}
+		  | <a href="{{ pathFor 'login' }}">Login</a> | <a href="{{ pathFor 'register' }}">Criar Conta</a>
+			{{/if}}
+		</p>
+	</nav>
+	<hr>
+	{{> yield }}
+</template>

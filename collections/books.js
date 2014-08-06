@@ -8,7 +8,8 @@ Schemas.Book = new SimpleSchema({
 	},
 
 	author: {
-		type: String
+		type: String,
+		optional: true
 	}
 });
 

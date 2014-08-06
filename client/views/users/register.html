@@ -1,0 +1,32 @@
+<template name="register">
+	{{> meteorErrors }}
+	<form id="register-form">
+		<fieldset>
+			<h4>Criar minha conta</h4>
+			<div class="field">
+				<label for="name">Nome</label>
+				<input type="text" id="name" name="name">
+			</div>
+
+			<div class="field">
+				<label for="username">Nome de Usuário</label>
+				<input type="text" id="username" name="username">
+			</div>
+
+			<div class="field">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email">
+			</div>
+
+			<div class="field">
+				<label for="password">Senha</label>
+				<input type="password" id="password" name="password">
+			</div>
+
+			<div class="field">
+				<input type="submit" value="Criar Conta">
+			</div>
+		</fieldset>
+	</form>
+	<p><a href="{{ pathFor 'login' }}">Entrar na minha conta</a></p>
+</template>
