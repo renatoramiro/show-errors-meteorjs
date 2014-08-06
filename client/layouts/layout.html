@@ -1,0 +1,7 @@
+<template name="layout">
+	<nav>
+		<p><a href="{{ pathFor 'booksList' }}">Home</a> | <a href="{{ pathFor 'insertBook' }}">Adicionar Livro</a></p>
+	</nav>
+	<hr>
+	{{> yield }}
+</template>
